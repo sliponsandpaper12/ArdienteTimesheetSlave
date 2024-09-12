@@ -5,6 +5,7 @@ from telegram import Update
 from telegram.ext import ContextTypes
 from .start import start
 from .unknown import unknown
+from .report_gen import report_gen
 
 # from .inline_caps import inline_caps  # Uncomment if needed
 
@@ -16,4 +17,4 @@ print("Armed and Ready!")
 
 
 # You can also define __all__ to specify what is imported with 'from your_bot import *'
-__all__ = ['Update', 'ContextTypes', 'start', 'unknown']  # Add other handlers as needed
+__all__ = ['Update', 'ContextTypes', 'start', 'unknown', 'report_gen']  # Add other handlers as needed

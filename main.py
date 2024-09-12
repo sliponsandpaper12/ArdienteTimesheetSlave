@@ -10,6 +10,7 @@ if __name__ == '__main__':
     
     application.add_handler(CommandHandler('start', start))
     application.add_handler(MessageHandler(filters.COMMAND, unknown))
+    application.add_handler(CommandHandler("report_gen",report_gen))
     # application.add_handler(InlineQueryHandler(inline_caps))
     
     application.run_polling() #check for new messages cnostantly 
