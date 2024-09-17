@@ -14,7 +14,8 @@ async def report_gen(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Check if running on a computer
     if IS_ON_COMPUTER:
         # Create the directory if it doesn't exist
-        if not os.path.exists(folder_name):
+        if not os.path.exists(
+        ):
             os.makedirs(folder_name)
         
         # Create a simple DataFrame for the report
