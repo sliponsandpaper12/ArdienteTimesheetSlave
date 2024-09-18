@@ -91,7 +91,7 @@ async def cancel(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text("Cancelled.")
     return ConversationHandler.END
 
-def get_generate_training_schedule():
+def generate_training_schedule():
     return ConversationHandler(
         entry_points=[CommandHandler('generate_schedule', generate_schedule)],
         states={

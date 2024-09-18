@@ -3,11 +3,11 @@
 # Importing submodules for easier access
 from telegram import Update
 from telegram.ext import ContextTypes
-from .start import start
-from .unknown import unknown
-from .report_gen import report_gen
-from .add_event import get_add_event_handler
-from .generate_training_schedule import get_generate_training_schedule
+# from .start import start
+# from .unknown import unknown
+# from .report_gen import report_gen
+# from .add_event import get_add_event_handler
+# from .generate_training_schedule import get_generate_training_schedule
 
 # from .inline_caps import inline_caps  # Uncomment if needed
 
