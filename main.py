@@ -2,8 +2,10 @@ from telegram.ext import ApplicationBuilder, ContextTypes, CommandHandler, Inlin
 from handlers.start import start
 from handlers.generate_schedule import get_generate_training_schedule_handler
 from handlers.add_event import get_add_event_handler
+from handlers.add_repeated_event import get_add_repeated_event_handler
 from handlers.unknown import unknown
 from utils.logging_config import setup_logging
+
 
 setup_logging()
 
@@ -15,6 +17,7 @@ if __name__ == '__main__':
     application.add_handler(CommandHandler('start', lambda update, context: start(update, context, user_states)))
     # application.add_handler(CommandHandler("report_gen",report_gen))
     application.add_handler(get_add_event_handler(user_states))
+    application.add_handler(get_add_repeated_event_handler(user_states))
     application.add_handler(get_generate_training_schedule_handler(user_states))
     application.add_handler(MessageHandler(filters.COMMAND, unknown))
     
