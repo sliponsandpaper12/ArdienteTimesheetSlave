@@ -69,7 +69,10 @@ async def receive_end_time(update: Update, context: ContextTypes.DEFAULT_TYPE):
         # Add event to Google Sheets (mock implementation)
         add_event_to_sheet(event_date, start_time.time(), end_time.time())
         
-        await update.message.reply_text("Event added successfully! Would you like to add another event? (yes/no)")
+        await update.message.reply_text(
+            f"Event on {event_date.strftime('%d/%m/%Y')}: {start_time.strftime('%H:%M')} - {end_time.strftime('%H:%M')} added successfully! "
+            "Would you like to add another event? (yes/no)"
+        )
         
         return ANOTHER_EVENT  # Move to the next state where we ask about another event
     
